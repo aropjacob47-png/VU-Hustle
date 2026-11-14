@@ -1,0 +1,824 @@
+/* =====================================================
+   VU HUSTLE STYLE SHEET
+   All colors are written as words (green, white, gray).
+   To change the look of the whole site, change the
+   colors in the box just below.
+   ===================================================== */
+
+:root {
+    --main: green;             /* buttons, links, icons */
+    --dark: rgb(26, 66, 26);         /* headings, hero and footer background */
+    --light-green: honeydew;   /* soft green backgrounds */
+    --text: darkslategray;     /* normal text */
+    --muted: dimgray;          /* small grey text */
+    --line: gainsboro;         /* thin borders */
+    --soft: mintcream;         /* soft section background */
+    --danger: firebrick;       /* delete and error color */
+    --star: goldenrod;         /* rating stars */
+    --radius: 12px;            /* rounded corners */
+}
+
+
+/* ---------- Basics ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: white;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--main);
+}
+
+a:hover {
+    color: var(--dark);
+}
+
+h1, h2, h3 {
+    color: var(--dark);
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+
+p {
+    margin: 0 0 1em;
+}
+
+/* Yellow outline that shows when you use the keyboard */
+:focus-visible {
+    outline: 3px solid gold;
+    outline-offset: 2px;
+}
+
+
+/* ---------- Layout helpers ---------- */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.section.soft {
+    background: var(--soft);
+}
+
+.center {
+    text-align: center;
+    padding: 64px 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+/* "Skip to content" link for keyboard users */
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    left: 8px;
+    top: 8px;
+    background: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+/* Hidden text that screen readers can still read */
+.vh {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Hidden spam trap field */
+.hp {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* ---------- Header and menu ---------- */
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+/* The Menu button (phones only) */
+.menu-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+/* The menu list is hidden on phones until you press Menu */
+#site-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: white;
+    border-bottom: 1px solid var(--line);
+}
+
+#site-nav.open {
+    display: block;
+}
+
+#site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 20px;
+}
+
+#site-nav a {
+    display: block;
+    padding: 12px 0;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* The page you are on */
+#site-nav a[aria-current] {
+    color: var(--main);
+    font-weight: bold;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 20px 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li + li::before {
+    content: ">";
+    margin-right: 6px;
+    color: var(--muted);
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--main);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark);
+    color: white;
+}
+
+.btn-outline {
+    background: white;
+    border-color: var(--main);
+    color: var(--main);
+}
+
+.btn-light {
+    background: white;
+    color: var(--dark);
+}
+
+.btn-wa {
+    background: limegreen;
+    color: black;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-sm {
+    min-height: 36px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Home page hero (the dark green area) ---------- */
+
+.hero {
+    background: var(--dark);
+    color: white;
+    padding: 48px 0;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+.hero p {
+    color: var(--light-green);
+    max-width: 560px;
+}
+
+.hero-inner {
+    display: grid;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 16px;
+    background: var(--main);
+}
+
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.search input {
+    flex: 1 1 220px;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+}
+
+
+/* ---------- Category cards on the Home page ---------- */
+
+.cats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+}
+
+.cat:hover,
+.cat:focus-visible {
+    border-color: var(--main);
+}
+
+/* The category photo */
+.cat-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--soft);
+}
+
+/* Shown when a category has no photo */
+.cat-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-fallback svg {
+    width: 56px;
+    height: 56px;
+}
+
+/* The small icon and the category name */
+.cat-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px 4px;
+}
+
+.cat-label strong {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.cat svg {
+    stroke: var(--main);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cat-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* The round arrow button */
+.cat-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 6px auto 14px;
+    border-radius: 50%;
+    background: var(--main);
+}
+
+.cat-arrow svg {
+    width: 18px;
+    height: 18px;
+    stroke: white;
+    stroke-width: 2.5;
+}
+
+.cat:hover .cat-arrow,
+.cat:focus-visible .cat-arrow {
+    background: var(--dark);
+}
+
+
+/* ---------- Seller cards ---------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--soft);
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-body p {
+    margin: 0 0 0.5em;
+}
+
+.card h3 {
+    margin: 6px 0;
+}
+
+.card h3 a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+/* The small category label on a card */
+.tag {
+    display: inline-block;
+    background: var(--light-green);
+    color: var(--dark);
+    padding: 2px 10px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Rating stars */
+.stars .star {
+    color: lightgray;
+}
+
+.stars .star.on {
+    color: var(--star);
+}
+
+
+/* ---------- "How it works" steps ---------- */
+
+.steps {
+    display: grid;
+    gap: 16px;
+}
+
+.step {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background: var(--main);
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ---------- Forms ---------- */
+
+.form {
+    max-width: 640px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+select,
+textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    background: white;
+    color: var(--text);
+    border: 1px solid gray;
+    border-radius: 8px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+input[type=file] {
+    max-width: 100%;
+}
+
+.hint {
+    margin: 4px 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+/* Product boxes on the List Your Business form */
+.product-row {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 12px 0;
+    margin-bottom: 12px;
+}
+
+/* Search and filter bar on the Directory page */
+.filters {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.filters .btn {
+    width: 100%;
+}
+
+
+/* ---------- Messages ---------- */
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alert-ok {
+    background: var(--light-green);
+    border: 1px solid var(--main);
+}
+
+.alert-error {
+    background: mistyrose;
+    border: 1px solid var(--danger);
+    color: darkred;
+}
+
+
+/* ---------- Seller profile page ---------- */
+
+.profile-head {
+    display: grid;
+    gap: 20px;
+}
+
+.profile-head img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.review {
+    border-bottom: 1px solid var(--line);
+    padding: 12px 0;
+}
+
+.review p {
+    margin: 4px 0;
+}
+
+details.report {
+    margin-top: 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+}
+
+details.report summary {
+    min-height: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ---------- Tables (admin pages) ---------- */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+}
+
+th {
+    background: var(--soft);
+}
+
+.inline {
+    display: inline;
+}
+
+.thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.thumbs img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ---------- Page numbers ---------- */
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background: var(--main);
+    border-color: var(--main);
+    color: white;
+}
+
+
+/* ---------- About page team list ---------- */
+
+.team {
+    margin: 0;
+    padding-left: 20px;
+}
+
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background: var(--dark);
+    color: var(--light-green);
+    padding: 32px 0 16px;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: white;
+}
+
+.site-footer h2 {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 24px 0 0;
+}
+
+
+/* =====================================================
+   BIGGER SCREENS
+   The rules above are for phones. The rules below
+   only start working when the screen gets wider.
+   ===================================================== */
+
+/* Small tablets */
+@media (min-width: 600px) {
+    .cats { grid-template-columns: repeat(3, 1fr); }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .team { columns: 2; }
+}
+
+/* Tablets */
+@media (min-width: 700px) {
+    .steps,
+    .footer-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .profile-head { grid-template-columns: 260px 1fr; }
+
+    .filters {
+        grid-template-columns: 2fr 1fr auto auto;
+        align-items: end;
+    }
+
+    .filters .btn { width: auto; }
+}
+
+/* Computers: the Menu button disappears and the menu shows in one line */
+@media (min-width: 800px) {
+    .menu-toggle { display: none; }
+
+    #site-nav {
+        display: block;
+        position: static;
+        border: 0;
+        background: none;
+    }
+
+    #site-nav ul {
+        display: flex;
+        gap: 24px;
+        padding: 0;
+    }
+
+    #site-nav a { padding: 8px 0; }
+
+    h1 { font-size: 2.3rem; }
+    .hero h1 { font-size: 2.8rem; }
+
+    .hero-inner {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 40px;
+    }
+
+    .hero-media img { aspect-ratio: 4 / 3; }
+}
+
+/* Large computers */
+@media (min-width: 900px) {
+    .cats { grid-template-columns: repeat(6, 1fr); }
+    .grid { grid-template-columns: repeat(3, 1fr); }
+}

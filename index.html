@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | VU Hustle</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<div id="crumbs"></div>
+<main id="main">
+<div id="flash"></div>
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1>Find student businesses at Victoria University</h1>
+            <p>Perfumes, cakes, clothes, phone accessories and more. See real photos, fixed prices in UGX and honest reviews from other students.</p>
+            <form class="search" action="directory.html" method="get" role="search">
+                <label class="vh" for="q">Search sellers</label>
+                <input type="text" id="q" name="q" placeholder="Try perfume or cake">
+                <button class="btn btn-light" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="hero-media">
+            <img id="heroImg" src="img/hero-default.svg" alt="Student market stall with bags, a cake, perfume and a phone" width="520" height="400">
+        </div>
+    </div>
+</section>
+<section class="section"><div class="container"><h2>Browse by category</h2><div class="cats" id="cats"></div></div></section>
+<section class="section soft"><div class="container"><h2>Featured sellers</h2><div id="featured"></div></div></section>
+<section class="section"><div class="container"><h2>How it works</h2>
+    <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>List</h3><p>Sellers fill in a short form with photos, fixed prices and a phone number.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Browse</h3><p>Buyers search or pick a category, then read reviews on each seller profile.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Contact</h3><p>Buyers call or message the seller on WhatsApp and meet on campus.</p></div>
+    </div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

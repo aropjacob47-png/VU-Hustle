@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directory | VU Hustle</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-crumbs='[["Home", "index.html"], ["Directory", null]]'>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<div id="crumbs"></div>
+<main id="main">
+<div id="flash"></div>
+<section class="section"><div class="container">
+    <h1 id="dirTitle">Directory</h1>
+    <p class="muted" id="dirIntro">Browse approved student businesses at Victoria University Uganda.</p>
+    <form class="filters" action="directory.html" method="get">
+        <div><label for="q">Search</label><input type="text" id="q" name="q" placeholder="Business, product or keyword"></div>
+        <div><label for="category">Category</label><select id="category" name="category"><option value="0">All categories</option></select></div>
+        <button class="btn btn-primary" type="submit">Search</button>
+        <a class="btn btn-outline" href="directory.html">Clear filters</a>
+    </form>
+    <div id="results"></div>
+    <nav class="pagination" id="pager" aria-label="Pages"></nav>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/directory.js"></script>
+</body>
+</html>

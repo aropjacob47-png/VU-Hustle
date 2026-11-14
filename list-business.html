@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List Your Business | VU Hustle</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-crumbs='[["Home", "index.html"], ["List Your Business", null]]'>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<div id="crumbs"></div>
+<main id="main">
+<div id="flash"></div>
+<section class="section"><div class="container">
+    <h1>List Your Business</h1>
+    <div class="alert alert-ok"><strong>Listing rules</strong><ul>
+        <li>Show fixed prices in UGX.</li><li>Sell genuine products only.</li><li>One listing per business.</li>
+        <li>The site team approves every listing before it appears in the Directory.</li></ul></div>
+    <div id="listErrors"></div>
+    <form class="form" id="listForm" novalidate>
+        <div class="field"><label for="owner_name">Owner name</label><input type="text" id="owner_name" maxlength="80" required></div>
+        <div class="field"><label for="business_name">Business name</label><input type="text" id="business_name" maxlength="80" required></div>
+        <div class="field"><label for="category_id">Category</label><select id="category_id" required><option value="">Choose a category</option></select></div>
+        <div class="field"><label for="description">What do you sell</label><textarea id="description" maxlength="500" required></textarea><p class="hint">20 to 500 characters.</p></div>
+        <div class="field"><label for="phone">Phone number</label><input type="tel" id="phone" maxlength="20" required><p class="hint">Buyers will use this for the Call button.</p></div>
+        <div class="field"><label for="whatsapp">WhatsApp number (optional)</label><input type="tel" id="whatsapp" maxlength="20"><p class="hint">Leave empty if it is the same as your phone number.</p></div>
+        <div class="field"><label for="campus_location">Where on campus can buyers find you</label><input type="text" id="campus_location" maxlength="100" placeholder="Example: Block B canteen" required></div>
+        <div class="field"><label for="logo">Logo or main photo (optional)</label><input type="file" id="logo" accept="image/jpeg,image/png,image/webp"><p class="hint">JPG, PNG or WebP, up to 3 MB. Photos are shrunk to load fast.</p></div>
+        <h2>Your products</h2>
+        <p class="muted">Add up to 6 products. The first one is required.</p>
+            <div class="product-row">
+                <strong>Product 1 (required)</strong>
+                <div class="field"><label for="pname0">Product name</label><input type="text" id="pname0" maxlength="80"></div>
+                <div class="field"><label for="pprice0">Fixed price in UGX</label><input type="number" id="pprice0" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto0">Product photo</label><input type="file" id="pphoto0" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+            <div class="product-row">
+                <strong>Product 2 (optional)</strong>
+                <div class="field"><label for="pname1">Product name</label><input type="text" id="pname1" maxlength="80"></div>
+                <div class="field"><label for="pprice1">Fixed price in UGX</label><input type="number" id="pprice1" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto1">Product photo</label><input type="file" id="pphoto1" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+            <div class="product-row">
+                <strong>Product 3 (optional)</strong>
+                <div class="field"><label for="pname2">Product name</label><input type="text" id="pname2" maxlength="80"></div>
+                <div class="field"><label for="pprice2">Fixed price in UGX</label><input type="number" id="pprice2" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto2">Product photo</label><input type="file" id="pphoto2" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+            <div class="product-row">
+                <strong>Product 4 (optional)</strong>
+                <div class="field"><label for="pname3">Product name</label><input type="text" id="pname3" maxlength="80"></div>
+                <div class="field"><label for="pprice3">Fixed price in UGX</label><input type="number" id="pprice3" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto3">Product photo</label><input type="file" id="pphoto3" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+            <div class="product-row">
+                <strong>Product 5 (optional)</strong>
+                <div class="field"><label for="pname4">Product name</label><input type="text" id="pname4" maxlength="80"></div>
+                <div class="field"><label for="pprice4">Fixed price in UGX</label><input type="number" id="pprice4" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto4">Product photo</label><input type="file" id="pphoto4" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+            <div class="product-row">
+                <strong>Product 6 (optional)</strong>
+                <div class="field"><label for="pname5">Product name</label><input type="text" id="pname5" maxlength="80"></div>
+                <div class="field"><label for="pprice5">Fixed price in UGX</label><input type="number" id="pprice5" min="1" step="1" inputmode="numeric"></div>
+                <div class="field"><label for="pphoto5">Product photo</label><input type="file" id="pphoto5" accept="image/jpeg,image/png,image/webp"></div>
+            </div>
+        <div class="field"><label><input type="checkbox" id="agree"> I follow the listing rules and agree to the <a href="safety-terms.html">Terms of use and privacy notice</a>.</label></div>
+        <button class="btn btn-primary" id="submitBtn" type="submit">Submit my listing</button>
+    </form>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>

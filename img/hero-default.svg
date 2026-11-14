@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="A student market stall with bags, a cake, perfume and a phone">
+<rect width="520" height="400" fill="#1B7F4B"/>
+<circle cx="60" cy="60" r="90" fill="#2E9E5B" opacity=".45"/><circle cx="480" cy="360" r="110" fill="#2E9E5B" opacity=".45"/>
+<rect x="96" y="70" width="8" height="250" fill="#0F3D2A"/><rect x="416" y="70" width="8" height="250" fill="#0F3D2A"/>
+<rect x="80" y="52" width="360" height="20" rx="10" fill="#0F3D2A"/>
+<rect x="88.0" y="72" width="57.3" height="46" fill="#FFFFFF"/>
+<circle cx="116.7" cy="118" r="28.65" fill="#FFFFFF"/>
+<rect x="145.3" y="72" width="57.3" height="46" fill="#E0A100"/>
+<circle cx="174.0" cy="118" r="28.65" fill="#E0A100"/>
+<rect x="202.6" y="72" width="57.3" height="46" fill="#FFFFFF"/>
+<circle cx="231.2" cy="118" r="28.65" fill="#FFFFFF"/>
+<rect x="259.9" y="72" width="57.3" height="46" fill="#E0A100"/>
+<circle cx="288.5" cy="118" r="28.65" fill="#E0A100"/>
+<rect x="317.2" y="72" width="57.3" height="46" fill="#FFFFFF"/>
+<circle cx="345.8" cy="118" r="28.65" fill="#FFFFFF"/>
+<rect x="374.5" y="72" width="57.3" height="46" fill="#E0A100"/>
+<circle cx="403.1" cy="118" r="28.65" fill="#E0A100"/>
+<rect x="76" y="296" width="368" height="84" rx="10" fill="#FFFFFF"/><rect x="76" y="296" width="368" height="18" rx="9" fill="#EAF5EF"/>
+<path d="M142 246v-14a17 17 0 0134 0v14" fill="none" stroke="#0F3D2A" stroke-width="6" stroke-linecap="round"/><rect x="124" y="244" width="70" height="54" rx="8" fill="#E0A100"/><rect x="124" y="262" width="70" height="8" fill="#0F3D2A" opacity=".25"/>
+<rect x="218" y="266" width="82" height="32" rx="8" fill="#F4E3C3"/><rect x="214" y="252" width="90" height="20" rx="10" fill="#FFFFFF"/><circle cx="259" cy="244" r="9" fill="#D32F2F"/><path d="M259 236v-8" stroke="#0F3D2A" stroke-width="3" stroke-linecap="round"/>
+<rect x="332" y="256" width="44" height="42" rx="9" fill="#F6B7C9"/><rect x="345" y="236" width="18" height="22" rx="3" fill="#0F3D2A"/><rect x="340" y="268" width="28" height="12" rx="3" fill="#FFFFFF" opacity=".7"/>
+<rect x="392" y="244" width="36" height="54" rx="7" fill="#0F3D2A"/><rect x="396" y="250" width="28" height="38" rx="3" fill="#EAF5EF"/><path d="M403 266l6 6 9-12" fill="none" stroke="#1B7F4B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="330" y="150" width="150" height="46" rx="23" fill="#FFFFFF"/>
+<polygon points="358.0,163.0 360.6,169.4 367.5,169.9 362.3,174.4 363.9,181.1 358.0,177.5 352.1,181.1 353.7,174.4 348.5,169.9 355.4,169.4" fill="#E0A100"/>
+<polygon points="382.0,163.0 384.6,169.4 391.5,169.9 386.3,174.4 387.9,181.1 382.0,177.5 376.1,181.1 377.7,174.4 372.5,169.9 379.4,169.4" fill="#E0A100"/>
+<polygon points="406.0,163.0 408.6,169.4 415.5,169.9 410.3,174.4 411.9,181.1 406.0,177.5 400.1,181.1 401.7,174.4 396.5,169.9 403.4,169.4" fill="#E0A100"/>
+<polygon points="430.0,163.0 432.6,169.4 439.5,169.9 434.3,174.4 435.9,181.1 430.0,177.5 424.1,181.1 425.7,174.4 420.5,169.9 427.4,169.4" fill="#E0A100"/>
+<polygon points="454.0,163.0 456.6,169.4 463.5,169.9 458.3,174.4 459.9,181.1 454.0,177.5 448.1,181.1 449.7,174.4 444.5,169.9 451.4,169.4" fill="#E0A100"/>
+<rect x="42" y="170" width="118" height="46" rx="23" fill="#FFFFFF"/>
+<path d="M82 203s-12-9-12-18a12 12 0 0124 0c0 9-12 18-12 18z" fill="#1B7F4B"/><circle cx="82" cy="185" r="4.5" fill="#FFFFFF"/>
+<rect x="106" y="188" width="38" height="6" rx="3" fill="#0F3D2A" opacity=".7"/><rect x="106" y="199" width="26" height="5" rx="2.5" fill="#0F3D2A" opacity=".35"/>
+</svg>
